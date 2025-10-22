@@ -1,0 +1,4 @@
+2025-08-16 10:02:02 | source=deck_sensor | event=haul_start
+2025-08-16 10:02:46 | source=deck_sensor | event=haul_start
+2025-08-16 10:03:15 | source=deck_sensor | event=haul_start
+2025-08-16 10:03:57 | source=deck_sensor | event=haul_start

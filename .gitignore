@@ -1,0 +1,84 @@
+# Dependencies
+node_modules/
+venv/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+credentials.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+
+# AWS
+.aws-sam/
+samconfig.toml
+
+# Amplify
+amplify/team-provider-info.json
+amplify/**/.config/
+
+# Git
+.git/
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Models and large files (re-downloadable)
+*.h5
+*.pkl
+*.pth
+*.onnx
+*.pb
+models/
+checkpoints/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Compiled files
+*.pyc
+*.pyo
+*.class
+*.o
+*.obj

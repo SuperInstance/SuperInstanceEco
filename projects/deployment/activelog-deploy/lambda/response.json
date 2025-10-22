@@ -1,0 +1,1 @@
+{"statusCode": 200, "body": "{\"message\": \"Log received\", \"log\": \"[2025-08-16T17:34:54.567336] Triggered by: deck_sensor | Event type: haul_start\"}"}

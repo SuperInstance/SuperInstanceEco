@@ -1,0 +1,7 @@
+type VoiceNote @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  text: String!
+  timestamp: AWSDateTime!
+  latitude: Float
+  longitude: Float
+}

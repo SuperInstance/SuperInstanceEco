@@ -1,0 +1,59 @@
+services:
+  app-gateway:
+    image: muazhari/autocode-example-app-gateway:latest
+    build:
+      context: ./app_gateway
+      dockerfile: .Dockerfile
+    command:
+      - go
+      - test
+      - -timeout=0
+      - -v
+      - ./test
+    volumes:
+      - ./app_gateway:/workdir
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - GATEWAY_PORT=8000
+      - ACCOUNT_HOST=app-account
+      - ACCOUNT_PORT=8000
+      - PRODUCT_HOST=app-product
+      - PRODUCT_PORT=8000
+      - GOPROXY=direct
+  app-account:
+    image: muazhari/autocode-example-app-account:latest
+    build:
+      context: ./app_account
+      dockerfile: .Dockerfile
+    command:
+      - go
+      - test
+      - -timeout=0
+      - -v
+      - ./test
+    volumes:
+      - ./app_account:/workdir
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - ACCOUNT_PORT=8000
+      - GOPROXY=direct
+  app-product:
+    image: muazhari/autocode-example-app-product:latest
+    build:
+      context: ./app_product
+      dockerfile: .Dockerfile
+    command:
+      - go
+      - test
+      - -timeout=0
+      - -v
+      - ./test
+    volumes:
+      - ./app_product:/workdir
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - PRODUCT_PORT=8000
+      - GOPROXY=direct

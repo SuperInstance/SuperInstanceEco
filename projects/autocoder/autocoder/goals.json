@@ -1,0 +1,6 @@
+[
+  "Write a Python script that fetches the current Bitcoin price from a public API and logs it to a CSV file with a timestamp",
+  "Add error handling and retries to the Bitcoin price script so it works even if the API is temporarily unavailable",
+  "Refactor the Bitcoin logger into a reusable module, then write a separate runner that imports it and logs prices every minute until stopped",
+  "Create a lightweight Flask API that reads the CSV and serves the latest Bitcoin price as JSON"
+]

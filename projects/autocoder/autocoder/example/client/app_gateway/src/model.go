@@ -1,0 +1,18 @@
+package src
+
+type Response[T any] struct {
+	Data T `json:"data"`
+}
+
+type Product struct {
+	Id    string  `json:"id"`
+	Name  string  `json:"name"`
+	Price float64 `json:"price"`
+	Stock int     `json:"stock"`
+}
+
+type Account struct {
+	Id       string `json:"id"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
+}
